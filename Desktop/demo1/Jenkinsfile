@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages {
+        stage('Compile') {
+            steps {
+                sh 'javac Factorial.java TestFact.java'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'java TestFact'
+            }
+        }
+        stage('Run') {
+            steps {
+                sh 'java Factorial'
+            }
+        }
+        stage('Package JAR') {
+            steps {
+                sh 'jar cfm factorial.jar manifest.txt Factorial.class'
+            }
+        }
+        stage('Archive') {
+            steps {
+                archiveArtifacts artifacts: '*.jar', fingerprint: true
+            }
+        }
+    }
+}
+
