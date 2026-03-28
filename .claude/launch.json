@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "FastAPI Backend",
+      "runtimeExecutable": "uvicorn",
+      "runtimeArgs": ["app.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"],
+      "port": 8000
+    },
+    {
+      "name": "MCP Server",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "mcp_server.server"],
+      "port": 8001
+    }
+  ]
+}
