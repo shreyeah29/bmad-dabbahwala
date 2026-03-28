@@ -1,0 +1,35 @@
+{
+  "name": "[DabbahWala] Lapsed Contact Reactivation",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "weeks", "weeksInterval": 1 }]
+        },
+        "triggerAtDay": [1],
+        "triggerAtHour": 9
+      },
+      "name": "Monday 9am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dabbahwala-latest.onrender.com/api/agents/cycle/run-all-lapsed",
+        "options": { "timeout": 300000 }
+      },
+      "name": "Run Lapsed Reactivation",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [450, 300]
+    }
+  ],
+  "connections": {
+    "Monday 9am": { "main": [[{ "node": "Run Lapsed Reactivation", "type": "main", "index": 0 }]] }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "dabbahwala" }, { "name": "agents" }, { "name": "reactivation" }]
+}

@@ -65,6 +65,9 @@ class Settings:
         self.google_client_id = os.environ.get("GOOGLE_CLIENT_ID", "")
         self.google_client_secret = os.environ.get("GOOGLE_CLIENT_SECRET", "")
         self.google_redirect_uri = os.environ.get("GOOGLE_REDIRECT_URI", "http://localhost:8000/auth/callback")
+        self.google_drive_refresh_token = os.environ.get("GOOGLE_DRIVE_REFRESH_TOKEN", "")
+        self.google_drive_folder_id = os.environ.get("GOOGLE_DRIVE_FOLDER_ID", "")
+        self.google_docs_refresh_token = os.environ.get("GOOGLE_DOCS_REFRESH_TOKEN", "")
 
         self._warn_missing()
 

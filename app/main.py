@@ -49,7 +49,53 @@ app = FastAPI(
 )
 
 from app.auth import router as auth_router  # noqa: E402
+from app.routers.credentials import router as credentials_router  # noqa: E402
+from app.routers.internal import router as internal_router  # noqa: E402
+from app.routers.events import router as events_router  # noqa: E402
+from app.routers.lifecycle import router as lifecycle_router  # noqa: E402
+from app.routers.intelligence import router as intelligence_router  # noqa: E402
+from app.routers.agents import router as agents_router  # noqa: E402
+from app.routers.agent_single import router as agent_single_router  # noqa: E402
+from app.routers.telnyx import router as telnyx_router  # noqa: E402
+from app.routers.webhooks import router as webhooks_router  # noqa: E402
+from app.routers.shipday import router as shipday_router  # noqa: E402
+from app.routers.daily_orders import router as daily_orders_router  # noqa: E402
+from app.routers.campaigns import router as campaigns_router  # noqa: E402
+from app.routers.contacts import router as contacts_router  # noqa: E402
+from app.routers.broadcasts import router as broadcasts_router  # noqa: E402
+from app.routers.menu import router as menu_router  # noqa: E402
+from app.routers.playbook import router as playbook_router  # noqa: E402
+from app.routers.content import router as content_router  # noqa: E402
+from app.routers.reports import router as reports_router  # noqa: E402
+from app.routers.field_agent import router as field_agent_router  # noqa: E402
+from app.routers.chatbot import router as chatbot_router  # noqa: E402
+from app.routers.marketing_query import router as marketing_query_router  # noqa: E402
+from app.routers.growth_agents import router as growth_router  # noqa: E402
+from app.routers.n8n_schedules import router as n8n_router  # noqa: E402
 app.include_router(auth_router)
+app.include_router(credentials_router)
+app.include_router(internal_router)
+app.include_router(events_router)
+app.include_router(lifecycle_router)
+app.include_router(intelligence_router)
+app.include_router(agents_router)
+app.include_router(agent_single_router)
+app.include_router(telnyx_router)
+app.include_router(webhooks_router)
+app.include_router(shipday_router)
+app.include_router(daily_orders_router)
+app.include_router(campaigns_router)
+app.include_router(contacts_router)
+app.include_router(broadcasts_router)
+app.include_router(menu_router)
+app.include_router(playbook_router)
+app.include_router(content_router)
+app.include_router(reports_router)
+app.include_router(field_agent_router)
+app.include_router(chatbot_router)
+app.include_router(marketing_query_router)
+app.include_router(growth_router)
+app.include_router(n8n_router)
 
 
 @app.middleware("http")

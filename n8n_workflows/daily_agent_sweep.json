@@ -1,0 +1,46 @@
+{
+  "name": "[DabbahWala] Daily Agent Sweep",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "hours", "hoursInterval": 24 }]
+        },
+        "triggerAtHour": 8
+      },
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dabbahwala-latest.onrender.com/api/agents/cycle/run-all",
+        "options": { "timeout": 300000 }
+      },
+      "name": "Run Daily Sweep",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dabbahwala-latest.onrender.com/api/agents/action-queue/post-process",
+        "options": { "timeout": 120000 }
+      },
+      "name": "Post-Process Actions",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [700, 300]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": { "main": [[{ "node": "Run Daily Sweep", "type": "main", "index": 0 }]] },
+    "Run Daily Sweep": { "main": [[{ "node": "Post-Process Actions", "type": "main", "index": 0 }]] }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "dabbahwala" }, { "name": "agents" }]
+}

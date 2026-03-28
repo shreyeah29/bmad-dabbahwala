@@ -1,0 +1,62 @@
+{
+  "name": "[DabbahWala] Airtable Full Sync",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "hours", "hoursInterval": 24 }]
+        },
+        "triggerAtHour": 6
+      },
+      "name": "6am Daily",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dabbahwala-latest.onrender.com/api/menu/sync-airtable",
+        "options": { "timeout": 60000 }
+      },
+      "name": "Sync Menu",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [450, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dabbahwala-latest.onrender.com/api/playbook/sync-airtable",
+        "options": { "timeout": 60000 }
+      },
+      "name": "Sync Playbook",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [450, 350]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dabbahwala-latest.onrender.com/api/content/sync-airtable",
+        "options": { "timeout": 60000 }
+      },
+      "name": "Sync Content",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [450, 500]
+    }
+  ],
+  "connections": {
+    "6am Daily": {
+      "main": [[
+        { "node": "Sync Menu", "type": "main", "index": 0 },
+        { "node": "Sync Playbook", "type": "main", "index": 0 },
+        { "node": "Sync Content", "type": "main", "index": 0 }
+      ]]
+    }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "dabbahwala" }, { "name": "sync" }, { "name": "airtable" }]
+}

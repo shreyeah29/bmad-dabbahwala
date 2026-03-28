@@ -56,169 +56,169 @@ development_status:
   2-3-protected-dashboard: done
   epic-2-retrospective: optional
 
-  epic-3: backlog
-  3-1-credentials-bootstrap-endpoint: backlog
-  3-2-smtp-email-proxy: backlog
-  3-3-google-drive-integration: backlog
-  3-4-google-docs-reader: backlog
+  epic-3: done
+  3-1-credentials-bootstrap-endpoint: done
+  3-2-smtp-email-proxy: done
+  3-3-google-drive-integration: done
+  3-4-google-docs-reader: done
   epic-3-retrospective: optional
 
   # ─── LAYER 1: Data & Events ───────────────────────────────────────────────
-  epic-4: backlog
-  4-1-base-schema-and-enums-migration-001: backlog
-  4-2-core-tables-migration-002: backlog
-  4-3-agent-pipeline-tables-migration-003: backlog
-  4-4-stored-functions-migration-004: backlog
-  4-5-growth-and-experiment-tables-migration-005: backlog
-  4-6-event-ingestion-endpoint: backlog
+  epic-4: done
+  4-1-base-schema-and-enums-migration-001: done
+  4-2-core-tables-migration-002: done
+  4-3-agent-pipeline-tables-migration-003: done
+  4-4-stored-functions-migration-004: done
+  4-5-growth-and-experiment-tables-migration-005: done
+  4-6-event-ingestion-endpoint: done
   epic-4-retrospective: optional
 
   # ─── LAYER 2: Lifecycle & Intelligence ───────────────────────────────────
-  epic-5: backlog
-  5-1-lifecycle-router-and-run-endpoint: backlog
-  5-2-lifecycle-segment-rules-migration: backlog
-  5-3-campaign-routing-seed-migration: backlog
+  epic-5: done
+  5-1-lifecycle-router-and-run-endpoint: done
+  5-2-lifecycle-segment-rules-migration: done
+  5-3-campaign-routing-seed-migration: done
   epic-5-retrospective: optional
 
-  epic-6: backlog
-  6-1-intelligence-router-and-run-cycle-endpoint: backlog
-  6-2-collect-and-profile-phases: backlog
-  6-3-signal-phase-7-signal-detectors: backlog
-  6-4-route-and-dispatch-phases: backlog
-  6-5-opportunities-api: backlog
-  6-6-instantly-events-ingestion: backlog
+  epic-6: done
+  6-1-intelligence-router-and-run-cycle-endpoint: done
+  6-2-collect-and-profile-phases: done
+  6-3-signal-phase-7-signal-detectors: done
+  6-4-route-and-dispatch-phases: done
+  6-5-opportunities-api: done
+  6-6-instantly-events-ingestion: done
   epic-6-retrospective: optional
 
   # ─── LAYER 3: AI Core ─────────────────────────────────────────────────────
-  epic-7: backlog
-  7-1-llm-service-foundation: backlog
-  7-2-layer-1-menu-agent: backlog
-  7-3-layer-1-sentiment-agent: backlog
-  7-4-layer-1-intent-agent: backlog
-  7-5-layer-1-engagement-agent: backlog
-  7-6-layer-1-parallel-execution-and-storage: backlog
-  7-7-layer-2-stage-agent: backlog
-  7-8-layer-2-channel-agent: backlog
-  7-9-layer-2-offer-agent: backlog
-  7-10-layer-2-escalation-agent: backlog
-  7-11-layer-2-parallel-execution-and-storage: backlog
-  7-12-layer-3-orchestrator-agent: backlog
-  7-13-playbook-rag-injection: backlog
-  7-14-agent-cycle-endpoints: backlog
-  7-15-action-queue-api-and-goals: backlog
-  7-16-batch-post-processing: backlog
-  7-17-layer-4-report-agents: backlog
+  epic-7: done
+  7-1-llm-service-foundation: done
+  7-2-layer-1-menu-agent: done
+  7-3-layer-1-sentiment-agent: done
+  7-4-layer-1-intent-agent: done
+  7-5-layer-1-engagement-agent: done
+  7-6-layer-1-parallel-execution-and-storage: done
+  7-7-layer-2-stage-agent: done
+  7-8-layer-2-channel-agent: done
+  7-9-layer-2-offer-agent: done
+  7-10-layer-2-escalation-agent: done
+  7-11-layer-2-parallel-execution-and-storage: done
+  7-12-layer-3-orchestrator-agent: done
+  7-13-playbook-rag-injection: done
+  7-14-agent-cycle-endpoints: done
+  7-15-action-queue-api-and-goals: done
+  7-16-batch-post-processing: done
+  7-17-layer-4-report-agents: done
   epic-7-retrospective: optional
 
-  epic-8: backlog
-  8-1-single-agent-router: backlog
+  epic-8: done
+  8-1-single-agent-router: done
   epic-8-retrospective: optional
 
   # ─── LAYER 4: Channels ────────────────────────────────────────────────────
-  epic-9: backlog
-  9-1-inbound-outbound-message-storage: backlog
-  9-2-call-tracking: backlog
-  9-3-field-agent-sms-and-templates: backlog
+  epic-9: done
+  9-1-inbound-outbound-message-storage: done
+  9-2-call-tracking: done
+  9-3-field-agent-sms-and-templates: done
   epic-9-retrospective: optional
 
-  epic-10: backlog
-  10-1-instantly-webhook: backlog
-  10-2-telnyx-inbound-webhook: backlog
-  10-3-shipday-webhooks-and-delivery-status: backlog
-  10-4-campaign-sync-webhooks: backlog
+  epic-10: done
+  10-1-instantly-webhook: done
+  10-2-telnyx-inbound-webhook: done
+  10-3-shipday-webhooks-and-delivery-status: done
+  10-4-campaign-sync-webhooks: done
   epic-10-retrospective: optional
 
   # ─── LAYER 5: Data Ingestion ──────────────────────────────────────────────
-  epic-11: backlog
-  11-1-shipday-order-ingestion: backlog
-  11-2-sync-status-and-top-calls: backlog
-  11-3-historical-import-pipeline: backlog
-  11-4-delivery-feedback: backlog
+  epic-11: done
+  11-1-shipday-order-ingestion: done
+  11-2-sync-status-and-top-calls: done
+  11-3-historical-import-pipeline: done
+  11-4-delivery-feedback: done
   epic-11-retrospective: optional
 
-  epic-12: backlog
-  12-1-csv-order-processing: backlog
+  epic-12: done
+  12-1-csv-order-processing: done
   epic-12-retrospective: optional
 
   # ─── LAYER 6: Campaign Management ────────────────────────────────────────
-  epic-13: backlog
-  13-1-push-lead-and-pending-queue: backlog
-  13-2-active-contacts-and-stats: backlog
-  13-3-push-log-and-audit: backlog
-  13-4-analytics-and-templates: backlog
+  epic-13: done
+  13-1-push-lead-and-pending-queue: done
+  13-2-active-contacts-and-stats: done
+  13-3-push-log-and-audit: done
+  13-4-analytics-and-templates: done
   epic-13-retrospective: optional
 
-  epic-14: backlog
-  14-1-new-contact-csv-import: backlog
-  14-2-bulk-contact-update: backlog
-  14-3-single-contact-operations: backlog
+  epic-14: done
+  14-1-new-contact-csv-import: done
+  14-2-bulk-contact-update: done
+  14-3-single-contact-operations: done
   epic-14-retrospective: optional
 
-  epic-15: backlog
-  15-1-broadcast-job-management: backlog
-  15-2-recipient-preview-and-dispatch: backlog
+  epic-15: done
+  15-1-broadcast-job-management: done
+  15-2-recipient-preview-and-dispatch: done
   epic-15-retrospective: optional
 
   # ─── LAYER 7: Content & Rules ─────────────────────────────────────────────
-  epic-16: backlog
-  16-1-menu-catalog-api: backlog
-  16-2-airtable-menu-sync: backlog
+  epic-16: done
+  16-1-menu-catalog-api: done
+  16-2-airtable-menu-sync: done
   epic-16-retrospective: optional
 
-  epic-17: backlog
-  17-1-playbook-rules-api: backlog
-  17-2-airtable-playbook-sync: backlog
+  epic-17: done
+  17-1-playbook-rules-api: done
+  17-2-airtable-playbook-sync: done
   epic-17-retrospective: optional
 
-  epic-18: backlog
-  18-1-content-sync-and-submit: backlog
-  18-2-browse-and-search: backlog
+  epic-18: done
+  18-1-content-sync-and-submit: done
+  18-2-browse-and-search: done
   epic-18-retrospective: optional
 
   # ─── LAYER 8: Reporting & Intelligence UI ────────────────────────────────
-  epic-19: backlog
-  19-1-daily-reports-api: backlog
+  epic-19: done
+  19-1-daily-reports-api: done
   epic-19-retrospective: optional
 
-  epic-20: backlog
-  20-1-daily-brief-generation: backlog
-  20-2-outcome-logging-and-hot-leads: backlog
-  20-3-scorecard-and-call-analysis: backlog
+  epic-20: done
+  20-1-daily-brief-generation: done
+  20-2-outcome-logging-and-hot-leads: done
+  20-3-scorecard-and-call-analysis: done
   epic-20-retrospective: optional
 
-  epic-21: backlog
-  21-1-chatbot-ask-and-suggest: backlog
-  21-2-reindex: backlog
+  epic-21: done
+  21-1-chatbot-ask-and-suggest: done
+  21-2-reindex: done
   epic-21-retrospective: optional
 
-  epic-22: backlog
-  22-1-named-query-categories-tier-1: backlog
-  22-2-free-form-claude-query-tier-2: backlog
+  epic-22: done
+  22-1-named-query-categories-tier-1: done
+  22-2-free-form-claude-query-tier-2: done
   epic-22-retrospective: optional
 
   # ─── LAYER 9: Growth Intelligence ────────────────────────────────────────
-  epic-23: backlog
-  23-1-growth-agent: backlog
-  23-2-goal-agent: backlog
-  23-3-competitor-agent: backlog
+  epic-23: done
+  23-1-growth-agent: done
+  23-2-goal-agent: done
+  23-3-competitor-agent: done
   epic-23-retrospective: optional
 
   # ─── LAYER 10: Operations ─────────────────────────────────────────────────
-  epic-24: backlog
-  24-1-e2e-test-harness: backlog
-  24-2-n8n-schedule-management: backlog
+  epic-24: done
+  24-1-e2e-test-harness: done
+  24-2-n8n-schedule-management: done
   epic-24-retrospective: optional
 
-  epic-25: backlog
-  25-1-fastmcp-server-setup: backlog
-  25-2-contact-and-analytics-tools: backlog
-  25-3-communication-and-action-tools: backlog
+  epic-25: done
+  25-1-fastmcp-server-setup: done
+  25-2-contact-and-analytics-tools: done
+  25-3-communication-and-action-tools: done
   epic-25-retrospective: optional
 
-  epic-26: backlog
-  26-1-core-automation-workflows: backlog
-  26-2-data-sync-workflows: backlog
-  26-3-reporting-and-field-workflows: backlog
-  26-4-growth-and-system-workflows: backlog
-  26-5-cicd-n8n-sync: backlog
+  epic-26: done
+  26-1-core-automation-workflows: done
+  26-2-data-sync-workflows: done
+  26-3-reporting-and-field-workflows: done
+  26-4-growth-and-system-workflows: done
+  26-5-cicd-n8n-sync: done
   epic-26-retrospective: optional

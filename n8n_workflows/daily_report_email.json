@@ -1,0 +1,66 @@
+{
+  "name": "[DabbahWala] Daily Report Email",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "hours", "hoursInterval": 24 }]
+        },
+        "triggerAtHour": 7
+      },
+      "name": "7am Daily",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://dabbahwala-latest.onrender.com/api/reports/daily-summary",
+        "options": {}
+      },
+      "name": "Get Daily Summary",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dabbahwala-latest.onrender.com/api/agents/report/activity",
+        "options": {}
+      },
+      "name": "Generate AI Report",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [700, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dabbahwala-latest.onrender.com/api/internal/send-email",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "to", "value": "core@dabbahwala.com" },
+            { "name": "subject", "value": "DabbahWala Daily Report" },
+            { "name": "body", "value": "={{ $json.html }}" }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Send Report Email",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [950, 300]
+    }
+  ],
+  "connections": {
+    "7am Daily": { "main": [[{ "node": "Get Daily Summary", "type": "main", "index": 0 }]] },
+    "Get Daily Summary": { "main": [[{ "node": "Generate AI Report", "type": "main", "index": 0 }]] },
+    "Generate AI Report": { "main": [[{ "node": "Send Report Email", "type": "main", "index": 0 }]] }
+  },
+  "active": true,
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "dabbahwala" }, { "name": "reports" }]
+}
