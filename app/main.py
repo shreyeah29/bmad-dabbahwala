@@ -48,6 +48,9 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+from app.auth import router as auth_router  # noqa: E402
+app.include_router(auth_router)
+
 
 @app.middleware("http")
 async def log_requests(request: Request, call_next):

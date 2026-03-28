@@ -50,10 +50,10 @@ development_status:
   1-7-app-configuration: done
   epic-1-retrospective: optional
 
-  epic-2: backlog
-  2-1-google-oauth2-login-flow: backlog
-  2-2-session-guard-and-auth-me: backlog
-  2-3-protected-dashboard: backlog
+  epic-2: done
+  2-1-google-oauth2-login-flow: done
+  2-2-session-guard-and-auth-me: done
+  2-3-protected-dashboard: done
   epic-2-retrospective: optional
 
   epic-3: backlog

@@ -62,6 +62,9 @@ class Settings:
         self.report_email_to = os.environ.get("REPORT_EMAIL_TO", "core@dabbahwala.com")
         self.log_level = os.environ.get("LOG_LEVEL", "INFO")
         self.allowed_domain = os.environ.get("ALLOWED_DOMAIN", "dabbahwala.com")
+        self.google_client_id = os.environ.get("GOOGLE_CLIENT_ID", "")
+        self.google_client_secret = os.environ.get("GOOGLE_CLIENT_SECRET", "")
+        self.google_redirect_uri = os.environ.get("GOOGLE_REDIRECT_URI", "http://localhost:8000/auth/callback")
 
         self._warn_missing()
 
